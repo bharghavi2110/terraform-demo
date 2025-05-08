@@ -1,4 +1,4 @@
-name: Terraform CI/CD
+name: Terraform CI/CD pipeline
 
 on:
   push:
@@ -10,9 +10,9 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v3  # Checkout the repository
+      - uses: actions/checkout@v3  
 
-      - name: Debug AWS Credentials  # Debugging step to check the secrets
+      - name: Debug AWS Credentials  
         run: |
           echo "AWS_ACCESS_KEY_ID is set: ${{ secrets.AWS_ACCESS_KEY_ID }}"
           echo "AWS_SECRET_ACCESS_KEY is set: ${{ secrets.AWS_SECRET_ACCESS_KEY }}"
